@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.get;
  * Created by Vladyslav Dovhopol on 4/27/17.
  * Test Greeting Controller.
  */
-public class GreetingControllerTest {
+public class AccessControllerTest {
 
     @Test
     public void GET_NoPayload_Correct() {

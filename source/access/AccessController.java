@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by Vladyslav Dovhopol on 4/25/17.
  */
 @Controller
-public class GreetingController {
+public class AccessController {
 
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
