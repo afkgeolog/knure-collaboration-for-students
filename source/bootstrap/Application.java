@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"access"})
+@ComponentScan(basePackages = {"access", "config"})
 public class Application {
 
     public static void main(String[] args) {
