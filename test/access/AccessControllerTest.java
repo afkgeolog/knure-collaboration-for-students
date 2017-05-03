@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Test Greeting Controller.
  */
 @RunWith(SpringRunner.class)
-@WebAppConfiguration
+@WebAppConfiguration(value = "source/config")
 @ContextConfiguration(classes = MvcConfiguration.class)
 public class AccessControllerTest {
 
