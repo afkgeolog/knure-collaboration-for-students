@@ -1,6 +1,6 @@
 package access;
 
-import config.WebApplicationConfiguration;
+import config.MvcConfiguration;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(classes = WebApplicationConfiguration.class)
+@ContextConfiguration(classes = MvcConfiguration.class)
 public class AccessControllerTest {
 
     private MockMvc mockMvc;

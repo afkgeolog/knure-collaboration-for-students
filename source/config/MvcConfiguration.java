@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Configuration
 @EnableWebMvc
-public class WebApplicationConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
+public class MvcConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
