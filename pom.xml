@@ -16,6 +16,14 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 
+    <repositories>
+        <repository>
+            <id>atlassian-3d-party-repository</id>
+            <name>Atlassian 3rd-Party</name>
+            <url>https://maven.atlassian.com/3rdparty/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!--Spring dependencies-->
         <dependency>
