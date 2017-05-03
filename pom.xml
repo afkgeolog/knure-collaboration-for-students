@@ -87,6 +87,7 @@
                 </dependencies>
             </plugin>
         </plugins>
+        <sourceDirectory>source</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
         <resources>
             <resource>
