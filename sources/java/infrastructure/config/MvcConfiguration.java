@@ -1,4 +1,4 @@
-package config;
+package infrastructure.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

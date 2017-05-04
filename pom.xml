@@ -69,7 +69,7 @@
 
     <properties>
         <!-- The main class to start by executing java -jar -->
-        <start-class>bootstrap.Application</start-class>
+        <start-class>infrastructure.bootstrap.Application</start-class>
         <java.version>1.8</java.version>
     </properties>
 
@@ -87,8 +87,8 @@
                 </dependencies>
             </plugin>
         </plugins>
-        <sourceDirectory>source</sourceDirectory>
-        <testSourceDirectory>test</testSourceDirectory>
+        <sourceDirectory>sources/java</sourceDirectory>
+        <testSourceDirectory>tests/java</testSourceDirectory>
         <resources>
             <resource>
                 <directory>resources</directory>
