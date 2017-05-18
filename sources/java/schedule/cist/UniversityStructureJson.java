@@ -1,0 +1,23 @@
+package schedule.cist;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import university.models.University;
+
+import java.io.IOException;
+
+/**
+ * @author Vladyslav Dovhopol
+ */
+public class UniversityStructureJson {
+
+    public University mapToModel(String jsonString) throws IOException {
+        JsonNode jsonNode = new ObjectMapper().reader().readTree(jsonString);
+        JsonNode universityNode = jsonNode.get("university");
+        ObjectReader universityReader = new ObjectMapper().readerFor(University.class);
+        University university = universityReader.readValue(universityNode);
+
+        return university;
+    }
+}

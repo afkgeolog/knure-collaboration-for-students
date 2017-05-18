@@ -16,4 +16,9 @@ public class AccessController {
         model.addAttribute("name", name);
         return "greeting";
     }
+
+    @RequestMapping(value = "/cist", produces = "application/json;charset=UTF-8")
+    public String testCist() {
+        return "Success";
+    }
 }

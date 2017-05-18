@@ -1,9 +1,13 @@
 package infrastructure.config;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowire;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -73,5 +77,14 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter implements Applica
         resolver.setTemplateMode(StandardTemplateModeHandlers.HTML5.getTemplateModeName());
         resolver.setName("Default Thymeleaf template resolver");
         return resolver;
+    }
+
+    @Bean(name = "restTemplateForCist", autowire = Autowire.BY_TYPE)
+    public RestTemplate createRestTemplateForCist() {
+        return new RestTemplateBuilder()
+                .rootUri("http://cist.nure.ua/ias/app/tt")
+                .setConnectTimeout(10_000)
+                .setReadTimeout(30_000)
+                .build();
     }
 }
