@@ -15,30 +15,33 @@ public class Faculty {
 
     private final Short id;
 
-    private final String shortName;
+    /**
+     * If the faculty name is "Faculty of Computer Science", abbreviation would look like "CS".
+     */
+    private final String abbreviation;
 
-    private final String fullName;
+    private final String name;
 
     private final Set<Department> departments = new HashSet<>();
 
     public Faculty(@JsonProperty(value = "id", required = true) Short id,
-                   @JsonProperty("short_name") String shortName,
-                   @JsonProperty("full_name") String fullName) {
+                   @JsonProperty("short_name") String abbreviation,
+                   @JsonProperty("full_name") String name) {
         this.id = id;
-        this.shortName = shortName;
-        this.fullName = fullName;
+        this.abbreviation = abbreviation;
+        this.name = name;
     }
 
-    public String getShortName() {
-        return shortName;
+    public String getAbbreviation() {
+        return abbreviation;
     }
 
     public Short getId() {
         return id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getName() {
+        return name;
     }
 
     public void addDepartment(Department department) {

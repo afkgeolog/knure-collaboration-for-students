@@ -21,6 +21,6 @@ public class UniversityTest {
         university.addFaculty(new Faculty(facultyId, "second", ""));
 
         assertThat(university.getFaculties(), hasSize(1));
-        assertThat(university.getFaculties().iterator().next().getShortName(), equalTo("first"));
+        assertThat(university.getFaculties().iterator().next().getAbbreviation(), equalTo("first"));
     }
 }

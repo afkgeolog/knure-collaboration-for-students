@@ -1,6 +1,7 @@
 package university.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
@@ -12,11 +13,11 @@ import java.util.Set;
 /**
  * @author Vladyslav Dovhopol
  */
+//Property "short_name" at the moment of removal duplicated id.
+@JsonIgnoreProperties("short_name")
 public class Building {
 
     private final String id;
-
-    private final String shortName;
 
     private final String fullName;
 
@@ -24,19 +25,13 @@ public class Building {
 
     @JsonCreator
     public Building(@JsonProperty(value = "id", required = true) String id,
-                    @JsonProperty(value = "short_name") String shortName,
                     @JsonProperty(value = "full_name") String fullName) {
         this.id = id;
-        this.shortName = shortName;
         this.fullName = fullName;
     }
 
     public String getId() {
         return id;
-    }
-
-    public String getShortName() {
-        return shortName;
     }
 
     public String getFullName() {

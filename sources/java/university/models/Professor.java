@@ -6,22 +6,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Objects;
 
 /**
+ * Presents professor at Kharkiv National University of Radioelectronics. It has name constraints. Full name is
+ * described by pattern "Surname Name Patronymic".
  * @author Vladyslav Dovhopol
  */
 public class Professor {
 
     private final Integer id;
 
-    private final String shortName;
+    /**
+     * Surname of the person and the initials.
+     * For example, if the full name is "Romashkin Vladimir Igorevich". Then name with initials will look like
+     * "Romashkin V.I.".
+     *
+     * However, this field duplicates {@link #fullName} and can be replaced with appropriate method. It has been
+     * inherited from API provided by resource cist.nure.ua. For the sake of DRY principle, should be removed.
+     */
+    private final String nameWithInitials;
 
+    /**
+     * Surname name and patronymic separated by single whitespace. Full name parts are expected to be used in this order, although this constraint
+     * isn't enforced. Also, some parts of name may be missing.
+     * Example String: "Romashkin Vladimir Igorevich"
+     */
     private final String fullName;
 
     @JsonCreator
     public Professor(@JsonProperty(value = "id", required = true) Integer id,
-                     @JsonProperty("short_name") String shortName,
+                     @JsonProperty("short_name") String nameWithInitials,
                      @JsonProperty("full_name") String fullName) {
         this.id = id;
-        this.shortName = shortName;
+        this.nameWithInitials = nameWithInitials;
         this.fullName = fullName;
     }
 
@@ -29,8 +44,8 @@ public class Professor {
         return id;
     }
 
-    public String getShortName() {
-        return shortName;
+    public String getNameWithInitials() {
+        return nameWithInitials;
     }
 
     public String getFullName() {

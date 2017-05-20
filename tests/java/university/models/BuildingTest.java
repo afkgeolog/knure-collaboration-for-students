@@ -16,7 +16,7 @@ public class BuildingTest {
 
     @Test
     public void addClassrooms_TwoEqual_KeptFirst() {
-        Building building = new Building("a", "", "");
+        Building building = new Building("a", "");
         Integer classroomId = 1;
         building.addClassroom(new Classroom(classroomId, "first", (byte) 1));
         building.addClassroom(new Classroom(classroomId, "second", (byte) 1));
@@ -29,7 +29,7 @@ public class BuildingTest {
     public void testEquals() {
         EqualsVerifier.forClass(Building.class)
                 .usingGetClass()
-                .withIgnoredFields("shortName", "fullName", "classrooms")
+                .withIgnoredFields("fullName", "classrooms")
                 .verify();
     }
 }

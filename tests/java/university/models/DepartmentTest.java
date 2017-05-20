@@ -22,14 +22,14 @@ public class DepartmentTest {
         department.addProfessor(new Professor(professorId, "second", ""));
 
         assertThat(department.getProfessors(), hasSize(1));
-        assertThat(department.getProfessors().iterator().next().getShortName(), equalTo("first"));
+        assertThat(department.getProfessors().iterator().next().getNameWithInitials(), equalTo("first"));
     }
 
     @Test
     public void testEquals() {
         EqualsVerifier.forClass(Department.class)
                 .usingGetClass()
-                .withIgnoredFields("shortName", "fullName", "professors")
+                .withIgnoredFields("abbreviation", "name", "professors")
                 .verify();
     }
 }

@@ -13,35 +13,39 @@ import java.util.Set;
  */
 public class University {
 
-    private final String shortName;
+    /**
+     * If the name of the university is "Kharkiv National University of Radioelectronics", abbreviation would look like
+     * "KNURE"
+     */
+    private final String abbreviation;
 
-    private final String fullName;
+    private final String name;
 
     private final Set<Faculty> faculties = new HashSet<>();
 
     private final Set<Building> buildings = new HashSet<>();
 
     @JsonCreator
-    public University(@JsonProperty(value = "short_name", required = true) String shortName,
-                      @JsonProperty("full_name") String fullName) {
-        this.shortName = shortName;
-        this.fullName = fullName;
+    public University(@JsonProperty(value = "short_name", required = true) String abbreviation,
+                      @JsonProperty("full_name") String name) {
+        this.abbreviation = abbreviation;
+        this.name = name;
     }
 
-    public String getShortName() {
-        return shortName;
+    public String getAbbreviation() {
+        return abbreviation;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public Collection<Faculty> getFaculties() {
-        return faculties;
+    public String getName() {
+        return name;
     }
 
     public void addFaculty(Faculty faculty) {
         faculties.add(faculty);
+    }
+
+    public Collection<Faculty> getFaculties() {
+        return faculties;
     }
 
     @JsonSetter("faculties")

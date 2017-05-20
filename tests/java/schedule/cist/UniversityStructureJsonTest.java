@@ -27,27 +27,27 @@ public class UniversityStructureJsonTest {
         String universityJson = new FileContent(Directory.PATH + "universityStructureProfessors.json").read();
         University university = parser.mapToModel(universityJson);
 
-        assertThat(university.getShortName(), equalTo("ХНУРЕ"));
-        assertThat(university.getFullName(), equalTo("Харківський Національний Університет Радіоелектроніки"));
+        assertThat(university.getAbbreviation(), equalTo("ХНУРЕ"));
+        assertThat(university.getName(), equalTo("Харківський Національний Університет Радіоелектроніки"));
 
         final List<Faculty> faculties = new ArrayList<>(university.getFaculties());
         assertThat(faculties, hasSize(2));
         assertThat(faculties.get(0).getId(), equalTo((short) 56));
-        assertThat(faculties.get(0).getShortName(), equalTo("ITM"));
-        assertThat(faculties.get(0).getFullName(),
+        assertThat(faculties.get(0).getAbbreviation(), equalTo("ITM"));
+        assertThat(faculties.get(0).getName(),
                    equalTo("Факультет інформаційно - аналітичних технологій та менеджменту"));
 
         final List<Department> departments = new ArrayList<>(faculties.get(0).getDepartments());
         assertThat(departments, hasSize(2));
         assertThat(departments.get(0).getId(), equalTo((short) 4));
-        assertThat(departments.get(0).getShortName(), equalTo("ВМ"));
-        assertThat(departments.get(0).getFullName(), equalTo("Кафедра вищої математики"));
+        assertThat(departments.get(0).getAbbreviation(), equalTo("ВМ"));
+        assertThat(departments.get(0).getName(), equalTo("Кафедра вищої математики"));
 
 
         final List<Professor> professors = new ArrayList<>(departments.get(0).getProfessors());
         assertThat(professors, hasSize(2));
         assertThat(professors.get(1).getId(), equalTo(394));
-        assertThat(professors.get(1).getShortName(), equalTo("Афанасьєв В. О."));
+        assertThat(professors.get(1).getNameWithInitials(), equalTo("Афанасьєв В. О."));
         assertThat(professors.get(1).getFullName(), equalTo("Афанасьєв Вадім Олексійович"));
     }
 
@@ -59,7 +59,6 @@ public class UniversityStructureJsonTest {
         final List<Building> buildings = new ArrayList<>(university.getBuildings());
         assertThat(buildings, hasSize(2));
         assertThat(buildings.get(1).getId(), equalTo("а"));
-        assertThat(buildings.get(1).getShortName(), equalTo("а"));
         assertThat(buildings.get(1).getFullName(), equalTo("корпус \"а\""));
 
         final List<Classroom> classrooms = new ArrayList<>(buildings.get(1).getClassrooms());

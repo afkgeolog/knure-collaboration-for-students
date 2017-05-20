@@ -16,31 +16,34 @@ public class Department {
 
     private final Short id;
 
-    private final String shortName;
+    /**
+     * If the department name is "Department of Applied Mathematics", abbreviation would look like "AM".
+     */
+    private final String abbreviation;
 
-    private final String fullName;
+    private final String name;
 
     private final Set<Professor> professors = new HashSet<>();
 
     @JsonCreator
     public Department(@JsonProperty(value = "id", required = true) Short id,
-                      @JsonProperty("short_name") String shortName,
-                      @JsonProperty("full_name") String fullName) {
+                      @JsonProperty("short_name") String abbreviation,
+                      @JsonProperty("full_name") String name) {
         this.id = id;
-        this.shortName = shortName;
-        this.fullName = fullName;
+        this.abbreviation = abbreviation;
+        this.name = name;
     }
 
     public Short getId() {
         return id;
     }
 
-    public String getShortName() {
-        return shortName;
+    public String getAbbreviation() {
+        return abbreviation;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getName() {
+        return name;
     }
 
     public void addProfessor(Professor professor) {

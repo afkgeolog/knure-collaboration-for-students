@@ -14,7 +14,7 @@ public class ProfessorTest {
     public void testEquals() {
         EqualsVerifier.forClass(Professor.class)
                 .usingGetClass()
-                .withIgnoredFields("shortName", "fullName")
+                .withIgnoredFields("nameWithInitials", "fullName")
                 .verify();
     }
 }
