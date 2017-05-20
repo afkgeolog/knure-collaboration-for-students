@@ -1,5 +1,6 @@
 package university.models;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -22,5 +23,13 @@ public class ClassroomTest {
 
         assertThat(classroom.getTypes(), hasSize(1));
         assertThat(classroom.getTypes().iterator().next().getName(), equalTo("PI"));
+    }
+
+    @Test
+    public void testEquals() {
+        EqualsVerifier.forClass(Classroom.class)
+                .usingGetClass()
+                .withIgnoredFields("name", "floor", "hasPowerSocket", "types")
+                .verify();
     }
 }

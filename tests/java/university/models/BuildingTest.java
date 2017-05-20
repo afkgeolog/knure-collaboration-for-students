@@ -1,5 +1,6 @@
 package university.models;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -22,5 +23,13 @@ public class BuildingTest {
 
         assertThat(building.getClassrooms(), hasSize(1));
         assertThat(building.getClassrooms().iterator().next().getName(), equalTo("first"));
+    }
+
+    @Test
+    public void testEquals() {
+        EqualsVerifier.forClass(Building.class)
+                .usingGetClass()
+                .withIgnoredFields("shortName", "fullName", "classrooms")
+                .verify();
     }
 }
