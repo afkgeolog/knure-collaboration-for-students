@@ -12,9 +12,9 @@ public class Professor {
 
     private final Integer id;
 
-    private String shortName;
+    private final String shortName;
 
-    private String fullName;
+    private final String fullName;
 
     @JsonCreator
     public Professor(@JsonProperty(value = "id", required = true) Integer id,

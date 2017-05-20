@@ -1,0 +1,44 @@
+{
+  "university":{
+    "short_name":"ХНУРЕ",
+    "full_name":"Харківський Національний Університет Радіоелектроніки",
+    "buildings":[
+      {
+        "id": "б",
+        "short_name": "б",
+        "full_name": "корпус \"б\"",
+        "auditories": []
+      },
+      {
+        "id": "а",
+        "short_name": "а",
+        "full_name": "корпус \"а\"",
+        "auditories": [
+          {
+            "id": "3931027",
+            "short_name": "285",
+            "floor": "2",
+            "is_have_power": "1",
+            "auditory_types": []
+          },
+          {
+            "id": "97",
+            "short_name": "287",
+            "floor": "2",
+            "is_have_power": "1",
+            "auditory_types": [
+              {
+                "id": "20",
+                "short_name": "Каф_ВЦ"
+              },
+              {
+                "id": "1684555",
+                "short_name": "ПІ"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

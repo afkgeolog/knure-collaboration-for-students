@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * @author Vladyslav Dovhopol
+ * @see UniversityStructureApi
  */
 @Service
 class UniversityStructure implements UniversityStructureApi{
@@ -18,19 +19,18 @@ class UniversityStructure implements UniversityStructureApi{
 
     @Override
     public University fetchProfessors() throws IOException {
-        String facultiesResponse = restTemplate.getForObject("/P_API_PODR_JSON", String.class);
-        University university = new UniversityStructureJson().mapToModel(facultiesResponse);
-
-        return university;
+        String professorsResponse = restTemplate.getForObject("/P_API_PODR_JSON", String.class);
+        return new UniversityStructureJson().mapToModel(professorsResponse);
     }
 
     @Override
     public University fetchGroups() {
-        throw new UnsupportedOperationException("The operation is not supported.");
+        throw new UnsupportedOperationException("The operation not supported.");
     }
 
     @Override
-    public University fetchAuditories() {
-        throw new UnsupportedOperationException("The operation not supported.");
+    public University fetchClassrooms() throws IOException {
+        String classroomsResponse = restTemplate.getForObject("/P_API_AUDITORIES_JSON", String.class);
+        return new UniversityStructureJson().mapToModel(classroomsResponse);
     }
 }

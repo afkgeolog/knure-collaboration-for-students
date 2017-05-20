@@ -14,9 +14,12 @@ import java.util.Set;
 public class Faculty {
 
     private final Short id;
-    private String shortName;
-    private String fullName;
-    private Set<Department> departments = new HashSet<>();
+
+    private final String shortName;
+
+    private final String fullName;
+
+    private final Set<Department> departments = new HashSet<>();
 
     public Faculty(@JsonProperty(value = "id", required = true) Short id,
                    @JsonProperty("short_name") String shortName,
@@ -38,7 +41,7 @@ public class Faculty {
         return fullName;
     }
 
-    private void addDepartment(Department department) {
+    public void addDepartment(Department department) {
         this.departments.add(department);
     }
 

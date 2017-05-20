@@ -12,26 +12,26 @@ import java.util.Set;
 /**
  * @author Vladyslav Dovhopol
  */
-public class Department {
+public class Building {
 
-    private final Short id;
+    private final String id;
 
     private final String shortName;
 
     private final String fullName;
 
-    private final Set<Professor> professors = new HashSet<>();
+    private final Set<Classroom> classrooms = new HashSet<>();
 
     @JsonCreator
-    public Department(@JsonProperty(value = "id", required = true) Short id,
-                      @JsonProperty("short_name") String shortName,
-                      @JsonProperty("full_name") String fullName) {
+    public Building(@JsonProperty(value = "id", required = true) String id,
+                    @JsonProperty(value = "short_name") String shortName,
+                    @JsonProperty(value = "full_name") String fullName) {
         this.id = id;
         this.shortName = shortName;
         this.fullName = fullName;
     }
 
-    public Short getId() {
+    public String getId() {
         return id;
     }
 
@@ -43,31 +43,31 @@ public class Department {
         return fullName;
     }
 
-    public void addProfessor(Professor professor) {
-        professors.add(professor);
+    public void addClassroom(Classroom classroom) {
+        this.classrooms.add(classroom);
     }
 
-    @JsonSetter("teachers")
-    public void addProfessors(Collection<Professor> professors) {
-        for (Professor professor : professors) {
-            addProfessor(professor);
+    @JsonSetter("auditories")
+    public void addClassrooms(Iterable<Classroom> classrooms) {
+        for (Classroom classroom : classrooms) {
+            addClassroom(classroom);
         }
     }
 
-    public Collection<Professor> getProfessors() {
-        return professors;
+    public Collection<Classroom> getClassrooms() {
+        return classrooms;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Department that = (Department) o;
-        return Objects.equals(getId(), that.getId());
+        Building building = (Building) o;
+        return Objects.equals(id, building.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(id);
     }
 }

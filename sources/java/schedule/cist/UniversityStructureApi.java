@@ -22,8 +22,8 @@ public interface UniversityStructureApi {
     University fetchGroups();
 
     /**
-     * Fetch university info, buildings and auditories. Auditories are placed in buildings.
-     * Each auditory may be of 0..N types.
+     * Fetch university info, buildings and classrooms. Classrooms are placed in buildings.
+     * Each classroom may be of 0..N types.
      */
-    University fetchAuditories();
+    University fetchClassrooms() throws IOException;
 }

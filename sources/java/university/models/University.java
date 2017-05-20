@@ -13,9 +13,13 @@ import java.util.Set;
  */
 public class University {
 
-    private String shortName;
-    private String fullName;
-    private Set<Faculty> faculties = new HashSet<>();
+    private final String shortName;
+
+    private final String fullName;
+
+    private final Set<Faculty> faculties = new HashSet<>();
+
+    private final Set<Building> buildings = new HashSet<>();
 
     @JsonCreator
     public University(@JsonProperty(value = "short_name", required = true) String shortName,
@@ -36,7 +40,7 @@ public class University {
         return faculties;
     }
 
-    private void addFaculty(Faculty faculty) {
+    public void addFaculty(Faculty faculty) {
         faculties.add(faculty);
     }
 
@@ -45,5 +49,20 @@ public class University {
         for (Faculty faculty : faculties) {
             addFaculty(faculty);
         }
+    }
+
+    private void addBuilding(Building building) {
+        this.buildings.add(building);
+    }
+
+    @JsonSetter("buildings")
+    public void addBuildings(Iterable<Building> buildings) {
+        for (Building building : buildings) {
+            addBuilding(building);
+        }
+    }
+
+    public Collection<Building> getBuildings() {
+        return buildings;
     }
 }
