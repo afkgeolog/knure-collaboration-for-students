@@ -20,12 +20,12 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @SpringBootTest
 public class UniversityStructureJsonTest {
 
-    private final UniversityStructureJson parser = new UniversityStructureJson();
+    private final UniversityStructureJson universityStructureJson = new UniversityStructureJson();
 
     @Test
     public void mapProfessorsResponse_JsonObject_Valid() throws IOException {
         String universityJson = new FileContent(Directory.PATH + "universityStructureProfessors.json").read();
-        University university = parser.mapToModel(universityJson);
+        University university = universityStructureJson.mapToModel(universityJson);
 
         assertThat(university.getAbbreviation(), equalTo("ХНУРЕ"));
         assertThat(university.getName(), equalTo("Харківський Національний Університет Радіоелектроніки"));
@@ -54,7 +54,7 @@ public class UniversityStructureJsonTest {
     @Test
     public void mapClassroomsResponse_JsonObject_Valid() throws IOException {
         String universityJson = new FileContent(Directory.PATH + "universityStructureClassrooms.json").read();
-        University university = parser.mapToModel(universityJson);
+        University university = universityStructureJson.mapToModel(universityJson);
 
         final List<Building> buildings = new ArrayList<>(university.getBuildings());
         assertThat(buildings, hasSize(2));

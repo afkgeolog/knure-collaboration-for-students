@@ -2,6 +2,7 @@ package university.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 import java.util.Objects;
 
@@ -16,13 +17,18 @@ public class ClassroomType {
 
     @JsonCreator
     public ClassroomType(@JsonProperty(value = "id", required = true) Integer id,
-                         @JsonProperty(value = "short_name", required = true)String name) {
+                         @JsonProperty(value = "short_name") String name) {
         this.id = id;
         this.name = name;
     }
 
     public Integer getId() {
         return id;
+    }
+
+    @JsonSetter("full_name")
+    private void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
