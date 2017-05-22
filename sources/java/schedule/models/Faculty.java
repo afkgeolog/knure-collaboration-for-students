@@ -1,4 +1,4 @@
-package university.models;
+package schedule.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;

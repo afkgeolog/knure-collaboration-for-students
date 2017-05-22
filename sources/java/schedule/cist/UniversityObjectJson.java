@@ -3,7 +3,7 @@ package schedule.cist;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
-import university.models.ClassroomType;
+import schedule.models.ClassroomType;
 
 import java.io.IOException;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package university.models;
+package schedule.models;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;

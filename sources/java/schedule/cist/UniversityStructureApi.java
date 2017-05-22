@@ -1,6 +1,6 @@
 package schedule.cist;
 
-import university.models.University;
+import schedule.models.University;
 
 import java.io.IOException;
 

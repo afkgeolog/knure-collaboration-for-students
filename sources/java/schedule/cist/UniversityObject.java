@@ -3,7 +3,7 @@ package schedule.cist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import university.models.ClassroomType;
+import schedule.models.ClassroomType;
 
 import java.io.IOException;
 import java.util.Collection;

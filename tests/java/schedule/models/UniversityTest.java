@@ -1,4 +1,4 @@
-package university.models;
+package schedule.models;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -2,7 +2,7 @@ package schedule.cist;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import university.models.ClassroomType;
+import schedule.models.ClassroomType;
 import utils.FileContent;
 
 import java.io.IOException;
