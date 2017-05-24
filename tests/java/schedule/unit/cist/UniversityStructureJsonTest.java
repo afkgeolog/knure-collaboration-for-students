@@ -1,11 +1,14 @@
-package schedule.cist;
+package schedule.unit.cist;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import schedule.cist.UniversityStructureJson;
 import schedule.models.*;
 import utils.FileContent;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +23,18 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @SpringBootTest
 public class UniversityStructureJsonTest {
 
-    private final UniversityStructureJson universityStructureJson = new UniversityStructureJson();
+    private final UniversityStructureJson universityStructureJson;
+
+    public UniversityStructureJsonTest() throws IllegalAccessException, ClassNotFoundException, InstantiationException,
+                                                NoSuchMethodException, InvocationTargetException {
+        Constructor constructor = UniversityStructureJson.class.getDeclaredConstructor();
+        constructor.setAccessible(true);
+        universityStructureJson = (UniversityStructureJson) constructor.newInstance();
+        constructor.setAccessible(false);
+    }
 
     @Test
-    public void mapProfessorsResponse_JsonObject_Valid() throws IOException {
+    public void mapProfessorsResponse_JsonObject_Valid() throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         String universityJson = new FileContent(Directory.PATH + "universityStructureProfessors.json").read();
         University university = universityStructureJson.mapToModel(universityJson);
 

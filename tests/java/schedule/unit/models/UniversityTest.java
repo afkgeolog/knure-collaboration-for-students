@@ -1,7 +1,9 @@
-package schedule.models;
+package schedule.unit.models;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import schedule.models.Faculty;
+import schedule.models.University;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;

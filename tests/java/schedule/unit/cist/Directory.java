@@ -1,4 +1,4 @@
-package schedule.cist;
+package schedule.unit.cist;
 
 /**
  * Current directory.
@@ -8,5 +8,5 @@ class Directory {
 
     private Directory(){}
 
-    static final String PATH = "schedule/cist/";
+    static final String PATH = "schedule/unit/cist/";
 }
