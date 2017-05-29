@@ -1,3 +1,10 @@
+sudo: required
 language: java
 jdk:
   - oraclejdk8
+services:
+  - docker
+before_install:
+  - bash postgreSQL/start_in_docker.sh
+after_script:
+  - bash postgreSQL/kill_in_docker.sh
