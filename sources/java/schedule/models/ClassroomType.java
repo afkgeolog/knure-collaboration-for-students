@@ -4,15 +4,24 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 /**
  * @author Vladyslav Dovhopol
  */
+@Entity
+@Table(name="ClassroomType", schema = "schedule")
 public class ClassroomType {
 
+    @Id
+    @Column(name = "id", unique = true, nullable = false, updatable = false)
     private final Integer id;
 
+    @Column(name = "name", nullable = false)
     private String name;
 
     @JsonCreator
@@ -46,5 +55,13 @@ public class ClassroomType {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "ClassroomType{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
