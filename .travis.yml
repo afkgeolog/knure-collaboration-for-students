@@ -1,10 +1,12 @@
+#For now give up with CI. Run tests manually. Configure Travis later, after main functionality is served.
 sudo: required
 language: java
 jdk:
   - oraclejdk8
 services:
-  - docker
-before_install:
-  - bash postgreSQL/start_in_docker.sh
-after_script:
-  - bash postgreSQL/kill_in_docker.sh
+  - postgresql
+before_script:
+  - psql -c "CREATE ROLE $POSTGRES_USER WITH CREATEDB LOGIN PASSWORD '$POSTGRES_PASSWORD';" --username=postgres
+  - psql -c "CREATE DATABASE \"$POSTGRES_DB\";" --username=$
+addons:
+  postgresql: "9.5"
