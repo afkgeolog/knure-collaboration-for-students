@@ -26,6 +26,17 @@ public class FacultyTest {
     }
 
     @Test
+    public void addGroups_TwoEqual_FirstKept() {
+        Faculty faculty = new Faculty(Short.valueOf("1"), "", "");
+        Integer groupId = 1;
+        faculty.addGroup(new Group(groupId, "first"));
+        faculty.addGroup(new Group(groupId, "second"));
+
+        assertThat(faculty.getGroups(), hasSize(1));
+        assertThat(faculty.getGroups().iterator().next().getName(), equalTo("first"));
+    }
+
+    @Test
     public void testEquals() {
         EqualsVerifier.forClass(Faculty.class)
                 .usingGetClass()
