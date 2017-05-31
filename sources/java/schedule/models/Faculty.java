@@ -24,7 +24,7 @@ public class Faculty {
 
     private final Set<Department> departments = new HashSet<>();
 
-    private final Set<Group> groups = new HashSet<>();
+    private final Set<Direction> directions = new HashSet<>();
 
     public Faculty(@JsonProperty(value = "id", required = true) Short id,
                    @JsonProperty("short_name") String abbreviation,
@@ -61,18 +61,18 @@ public class Faculty {
         return departments;
     }
 
-    public void addGroup(Group group) {
-        this.groups.add(group);
+    public void addDirection(Direction direction) {
+        this.directions.add(direction);
     }
 
-    public void addGroups(Iterable<Group> groups) {
-        for (Group group : groups) {
-            addGroup(group);
+    public void addDirections(Iterable<Direction> directions) {
+        for (Direction direction : directions) {
+            addDirection(direction);
         }
     }
 
-    public Collection<Group> getGroups() {
-        return groups;
+    public Collection<Direction> getDirections() {
+        return directions;
     }
 
     @Override

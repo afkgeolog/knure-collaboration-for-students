@@ -28,19 +28,19 @@ public class FacultyTest {
     @Test
     public void addGroups_TwoEqual_FirstKept() {
         Faculty faculty = new Faculty(Short.valueOf("1"), "", "");
-        Integer groupId = 1;
-        faculty.addGroup(new Group(groupId, "first"));
-        faculty.addGroup(new Group(groupId, "second"));
+        Integer directionId = 1;
+        faculty.addDirection(new Direction(directionId, "first", ""));
+        faculty.addDirection(new Direction(directionId, "second", ""));
 
-        assertThat(faculty.getGroups(), hasSize(1));
-        assertThat(faculty.getGroups().iterator().next().getName(), equalTo("first"));
+        assertThat(faculty.getDirections(), hasSize(1));
+        assertThat(faculty.getDirections().iterator().next().getName(), equalTo("first"));
     }
 
     @Test
     public void testEquals() {
         EqualsVerifier.forClass(Faculty.class)
                 .usingGetClass()
-                .withIgnoredFields("abbreviation", "name", "departments")
+                .withIgnoredFields("abbreviation", "name", "departments", "directions")
                 .verify();
     }
 }
