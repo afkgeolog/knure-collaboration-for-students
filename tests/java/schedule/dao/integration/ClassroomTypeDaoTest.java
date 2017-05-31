@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Commit;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import schedule.dao.ClassroomTypeDao;
 import schedule.models.ClassroomType;
 
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -41,8 +43,15 @@ public class ClassroomTypeDaoTest {
     }
 
     @Test
-    public void save_ValidType_Saved() {
+    public void insert_ValidType_Saved() {
         ClassroomType type = new ClassroomType(1, "classroomType");
-        dao.save(type);
+        dao.insert(type);
+    }
+
+    @Test(expected = EntityExistsException.class)
+    @Rollback
+    public void insert_TwoEqualTypes_Exception() {
+        dao.insert(new ClassroomType(1, "firstType"));
+        dao.insert(new ClassroomType(1, "secondType"));
     }
 }

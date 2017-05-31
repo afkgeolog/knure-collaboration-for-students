@@ -18,11 +18,17 @@ public class ClassroomTypeDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-    //TODO: Calling persist is not enough to save entity.
+    //TODO: Calling persist is not enough to insert entity.
     /* What if the entity is already in persistence context and need to be merged. What if entity is detached.
        JPA entity lifecycle states other than "new" aren't managed.
      */
-    public void save(ClassroomType classroomType) {
+
+    /**
+     * Insert new classroom type to the database.
+     * @param classroomType new classroom type.
+     * @throws javax.persistence.EntityExistsException when entity with the same key is already persisted.
+     */
+    public void insert(ClassroomType classroomType) {
         entityManager.persist(classroomType);
     }
 }
