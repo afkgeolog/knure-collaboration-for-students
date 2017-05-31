@@ -2,6 +2,7 @@ package schedule.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.annotations.Immutable;
 
 import java.util.Objects;
 
@@ -10,6 +11,7 @@ import java.util.Objects;
  * described by pattern "Surname Name Patronymic".
  * @author Vladyslav Dovhopol
  */
+@Immutable
 public class Professor {
 
     private final Integer id;

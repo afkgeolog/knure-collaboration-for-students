@@ -1,4 +1,4 @@
-package schedule.integration.dao;
+package schedule.dao.integration;
 
 import infrastructure.config.HibernateConfiguration;
 import org.junit.Before;

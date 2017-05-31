@@ -3,6 +3,7 @@ package schedule.models;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import org.hibernate.annotations.Immutable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import java.util.Objects;
 /**
  * @author Vladyslav Dovhopol
  */
+@Immutable
 @Entity
 @Table(name="ClassroomType", schema = "schedule")
 public class ClassroomType {

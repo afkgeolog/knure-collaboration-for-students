@@ -1,9 +1,8 @@
-package schedule.unit.models;
+package schedule.models;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import schedule.models.Professor;
 
 /**
  * @author Vladyslav Dovhopol

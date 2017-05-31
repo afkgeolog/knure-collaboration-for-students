@@ -1,10 +1,8 @@
-package schedule.unit.models;
+package schedule.models;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import schedule.models.Classroom;
-import schedule.models.ClassroomType;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;

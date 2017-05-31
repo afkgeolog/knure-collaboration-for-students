@@ -8,7 +8,7 @@ import java.nio.file.Paths;
  * Presents content of file.
  * @author Vladyslav Dovhopol
  */
-public class FileContent {
+public final class FileContent {
 
     private final String path;
 

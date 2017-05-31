@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * @author Vladyslav Dovhopol
  */
-public class JsonFileContent {
+public final class JsonFileContent {
 
     private final FileContent fileContent;
 

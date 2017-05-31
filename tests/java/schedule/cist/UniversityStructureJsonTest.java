@@ -1,13 +1,12 @@
-package schedule.unit.cist;
+package schedule.cist;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import schedule.cist.UniversityStructureJson;
 import schedule.models.*;
 import utils.FileContent;
+import utils.TestClassDirectory;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,19 +22,13 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @SpringBootTest
 public class UniversityStructureJsonTest {
 
-    private final UniversityStructureJson universityStructureJson;
+    private final String DIRECTORY = TestClassDirectory.getPath(getClass());
 
-    public UniversityStructureJsonTest() throws IllegalAccessException, ClassNotFoundException, InstantiationException,
-                                                NoSuchMethodException, InvocationTargetException {
-        Constructor constructor = UniversityStructureJson.class.getDeclaredConstructor();
-        constructor.setAccessible(true);
-        universityStructureJson = (UniversityStructureJson) constructor.newInstance();
-        constructor.setAccessible(false);
-    }
+    private final UniversityStructureJson universityStructureJson = new UniversityStructureJson();
 
     @Test
     public void mapProfessorsResponse_JsonObject_Valid() throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        String universityJson = new FileContent(Directory.PATH + "universityStructureProfessors.json").read();
+        String universityJson = new FileContent(DIRECTORY + "universityStructureProfessors.json").read();
         University university = universityStructureJson.mapToModel(universityJson);
 
         assertThat(university.getAbbreviation(), equalTo("ХНУРЕ"));
@@ -64,7 +57,7 @@ public class UniversityStructureJsonTest {
 
     @Test
     public void mapClassroomsResponse_JsonObject_Valid() throws IOException {
-        String universityJson = new FileContent(Directory.PATH + "universityStructureClassrooms.json").read();
+        String universityJson = new FileContent(DIRECTORY + "universityStructureClassrooms.json").read();
         University university = universityStructureJson.mapToModel(universityJson);
 
         final List<Building> buildings = new ArrayList<>(university.getBuildings());

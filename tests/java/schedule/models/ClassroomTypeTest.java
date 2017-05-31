@@ -1,8 +1,7 @@
-package schedule.unit.models;
+package schedule.models;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
-import schedule.models.ClassroomType;
 
 /**
  * @author Vladyslav Dovhopol

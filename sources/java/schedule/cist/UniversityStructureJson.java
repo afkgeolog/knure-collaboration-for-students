@@ -10,9 +10,7 @@ import java.io.IOException;
 /**
  * @author Vladyslav Dovhopol
  */
-public class UniversityStructureJson {
-
-    UniversityStructureJson() {}
+final class UniversityStructureJson {
 
     public University mapToModel(String jsonString) throws IOException {
         JsonNode jsonNode = new ObjectMapper().reader().readTree(jsonString);

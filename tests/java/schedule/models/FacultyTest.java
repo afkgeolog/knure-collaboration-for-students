@@ -1,10 +1,8 @@
-package schedule.unit.models;
+package schedule.models;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import schedule.models.Department;
-import schedule.models.Faculty;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;

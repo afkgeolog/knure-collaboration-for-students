@@ -15,9 +15,7 @@ import java.util.HashSet;
  *
  * @author Vladyslav Dovhopol
  */
-public class UniversityObjectJson {
-
-    UniversityObjectJson() {}
+final class UniversityObjectJson {
 
     public Collection<ClassroomType> mapClassroomTypesToModels(String cistResponse) throws IOException {
         JsonNode jsonNode = new ObjectMapper().reader().readTree(cistResponse);
