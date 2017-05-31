@@ -1,5 +1,8 @@
 package schedule.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -19,7 +22,9 @@ public class Direction {
 
     private final Set<Speciality> specialities = new HashSet<>();
 
-    public Direction(Integer id, String name, String abbreviation) {
+    public Direction(@JsonProperty(value = "id", required = true) Integer id,
+                     @JsonProperty("full_name") String name,
+                     @JsonProperty("short_name") String abbreviation) {
         this.id = id;
         this.name = name;
         this.abbreviation = abbreviation;
@@ -41,6 +46,7 @@ public class Direction {
         this.bachelorGroups.add(group);
     }
 
+    @JsonSetter("groups")
     public void addGroups(Iterable<Group> groups) {
         for (final Group group : groups) {
             addGroup(group);

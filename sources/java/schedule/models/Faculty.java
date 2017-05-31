@@ -65,6 +65,7 @@ public class Faculty {
         this.directions.add(direction);
     }
 
+    @JsonSetter("directions")
     public void addDirections(Iterable<Direction> directions) {
         for (Direction direction : directions) {
             addDirection(direction);

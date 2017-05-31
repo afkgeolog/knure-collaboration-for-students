@@ -78,4 +78,34 @@ public class UniversityStructureJsonTest {
         assertThat(classroomTypes.get(0).getId(), equalTo(20));
         assertThat(classroomTypes.get(0).getName(), equalTo("Каф_ВЦ"));
     }
+
+    @Test
+    public void mapGroupsResponse_JsonObject_Valid() throws IOException {
+        String universityJson = new FileContent(DIRECTORY + "universityStructureGroups.json").read();
+        University university = universityStructureJson.mapToModel(universityJson);
+
+        final List<Faculty> faculties = new ArrayList<>(university.getFaculties());
+        assertThat(faculties, hasSize(1));
+
+        final List<Direction> directions = new ArrayList<>(faculties.get(0).getDirections());
+        assertThat(directions, hasSize(1));
+        assertThat(directions.get(0).getId(), equalTo(36));
+        assertThat(directions.get(0).getName(), equalTo("Безпека інформаційних і комунікаційних систем"));
+        assertThat(directions.get(0).getAbbreviation(), equalTo("БІКС"));
+
+        final List<Group> directionGroups = new ArrayList<>(directions.get(0).getGroups());
+        assertThat(directionGroups, hasSize(2));
+        assertThat(directionGroups.get(0).getId(), equalTo(3803011));
+        assertThat(directionGroups.get(0).getName(), equalTo("БІКС-12-1"));
+
+        final List<Speciality> specialities = new ArrayList<>(directions.get(0).getSpecialities());
+        assertThat(specialities, hasSize(1));
+        assertThat(specialities.get(0).getName(), equalTo("БДІР"));
+        assertThat(specialities.get(0).getAbbreviation(), equalTo("БДІР"));
+
+        final List<Group> specialityGroups = new ArrayList<>(specialities.get(0).getGroups());
+        assertThat(specialityGroups, hasSize(2));
+        assertThat(specialityGroups.get(0).getId(), equalTo(3802977));
+        assertThat(specialityGroups.get(0).getName(), equalTo("БІКС-12-2"));
+    }
 }

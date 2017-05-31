@@ -19,7 +19,7 @@ public interface UniversityStructureApi {
      * Fetch university info, faculties, directions, specialities and groups.
      * Directions include only bachelors' groups. Specialities contain groups for masters and specialists.
      */
-    University fetchGroups();
+    University fetchGroups() throws IOException;
 
     /**
      * Fetch university info, buildings and classrooms. Classrooms are placed in buildings.

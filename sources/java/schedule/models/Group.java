@@ -1,5 +1,6 @@
 package schedule.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.Immutable;
 
 import java.util.Objects;
@@ -14,7 +15,8 @@ public class Group {
 
     private final String name;
 
-    public Group(Integer id, String name) {
+    public Group(@JsonProperty(value = "id", required = true) Integer id,
+                 @JsonProperty(value = "name") String name) {
         this.id = id;
         this.name = name;
     }

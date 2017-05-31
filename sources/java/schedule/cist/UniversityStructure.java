@@ -24,8 +24,9 @@ class UniversityStructure implements UniversityStructureApi{
     }
 
     @Override
-    public University fetchGroups() {
-        throw new UnsupportedOperationException("The operation not supported.");
+    public University fetchGroups() throws IOException {
+        String groupsResponse = restTemplate.getForObject("/P_API_GROUP_JSON", String.class);
+        return new UniversityStructureJson().mapToModel(groupsResponse);
     }
 
     @Override
