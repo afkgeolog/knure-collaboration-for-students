@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import infrastructure.deserialization.IntToBooleanDeserializer;
 
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
@@ -14,8 +15,11 @@ import java.util.Set;
 /**
  * @author Vladyslav Dovhopol
  */
+@Entity
+@Table(name = "classroom", schema = "schedule")
 public class Classroom {
 
+    @Id
     private final Integer id;
 
     private final String name;
@@ -24,7 +28,21 @@ public class Classroom {
 
     private boolean hasPowerSocket = false;
 
+    @OneToMany
+    @JoinTable(name = "ClassroomTypes", schema = "schedule",
+               joinColumns = @JoinColumn(name = "classroom_id", referencedColumnName = "id"),
+               inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id")
+               )
     private final Set<ClassroomType> types = new HashSet<>();
+
+    /**
+     * Fake constructor for Hibernate.
+     */
+    private Classroom() {
+        id = Integer.MIN_VALUE;
+        name = "";
+        floor = Byte.MIN_VALUE;
+    }
 
     @JsonCreator
     public Classroom(@JsonProperty(value = "id", required = true) Integer id,
@@ -32,7 +50,7 @@ public class Classroom {
                      @JsonProperty(value = "floor", required = true) Byte floor) {
         this.id = id;
         this.name = name;
-        this.floor = floor;
+        this.floor = floor == null ? 0 : floor;
     }
 
     public Integer getId() {

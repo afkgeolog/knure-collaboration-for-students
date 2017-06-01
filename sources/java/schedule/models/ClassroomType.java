@@ -3,7 +3,6 @@ package schedule.models;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import org.hibernate.annotations.Immutable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +13,6 @@ import java.util.Objects;
 /**
  * @author Vladyslav Dovhopol
  */
-@Immutable
 @Entity
 @Table(name="ClassroomType", schema = "schedule")
 public class ClassroomType {
@@ -25,6 +23,13 @@ public class ClassroomType {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    /**
+     * Fake constructor for Hibernate.
+     */
+    private ClassroomType() {
+        id = 0;
+    }
 
     @JsonCreator
     public ClassroomType(@JsonProperty(value = "id", required = true) Integer id,

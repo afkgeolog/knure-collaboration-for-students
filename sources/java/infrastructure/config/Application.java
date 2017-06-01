@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"access", "infrastructure.config", "schedule"})
+@ComponentScan(basePackages = {"access", "infrastructure.config", "infrastructure.bootstrap", "schedule"})
 @PropertySources({@PropertySource(value = "flyway.properties", encoding = "UTF-8")})
 public class Application {
 

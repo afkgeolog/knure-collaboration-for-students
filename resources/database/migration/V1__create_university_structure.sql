@@ -1,0 +1,18 @@
+CREATE TABLE ClassroomType (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL
+);
+
+CREATE TABLE Classroom (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  floor SMALLINT NOT NULL,
+  hasPowerSocket BOOLEAN NOT NULL
+);
+
+CREATE TABLE ClassroomTypes (
+  classroom_id INTEGER NOT NULL,
+  type_id INTEGER NOT NULL,
+  FOREIGN KEY (classroom_id) REFERENCES Classroom(id) ON DELETE CASCADE,
+  FOREIGN KEY (type_id) REFERENCES ClassroomType(id) ON DELETE RESTRICT
+);

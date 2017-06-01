@@ -10,15 +10,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import schedule.dao.ClassroomTypeDao;
-import schedule.models.ClassroomType;
+import schedule.dao.ClassroomDao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 
 /**
  * @author Vladyslav Dovhopol
@@ -28,30 +24,23 @@ import static org.hamcrest.Matchers.is;
 @ContextConfiguration(classes = {HibernateConfiguration.class})
 @Transactional
 @Commit
-public class ClassroomTypeDaoTest {
+public class ClassroomDaoTest {
 
     @Autowired
-    private ClassroomTypeDao dao;
+    private ClassroomDao dao;
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @SuppressWarnings("JpaQlInspection")
     @Before
-    public void deleteAllClassroomTypes() {
-        Query query = entityManager.createQuery("DELETE FROM ClassroomType");
+    public void deleteAllClassrooms() {
+        Query query = entityManager.createQuery("DELETE FROM Classroom");
         query.executeUpdate();
     }
 
     @Test
-    public void insert_ValidType_Saved() {
-        ClassroomType type = new ClassroomType(1, "classroomType");
-        assertThat(dao.insert(type), is(true));
-    }
+    public void insert_newValidClassroom_Success() {
 
-    @Test
-    public void insert_TwoEqualTypes_DifferentResponse() {
-        assertThat(dao.insert(new ClassroomType(1, "firstType")), is(true));
-        assertThat(dao.insert(new ClassroomType(1, "secondType")), is(false));
     }
 }
