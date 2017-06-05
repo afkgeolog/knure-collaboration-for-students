@@ -91,7 +91,7 @@ function createTable() {
 	cell = insertButton(cell, '<', 0);
 	
 	// вторая ячейка
-	var cell = row.insertCell(-1);
+	cell = row.insertCell(-1);
 	cell.setAttribute('colspan', '3', 0);	
 	
 	// третья ячейка

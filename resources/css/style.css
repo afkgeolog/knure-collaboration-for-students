@@ -373,17 +373,6 @@ nav li a {
 .caption{
 	margin-left: 95px;
 }
-.basement{
-	width: 100%;
-	background-color: #ccc;
-	margin-top: 400px;
-	position: fixed;
-
-}
-.about__footer{
-	text-align: center;
-}
-
 
 /*/***** T13 Overload *****/
   a:link,a:visited{
@@ -394,25 +383,8 @@ nav li a {
   	text-decoration:underline;
   	color:#0066FF;
   }
-  .t13RegionButtons{
-  	background:#fff;
-  	vertical-align:middle; 
-  	text-align:right;
-  	padding:2px;
-  }
-  .t13RegionButtonsLeft{
-  	background:#fff;
-  	vertical-align:middle; 
-  	text-align:left;
-  	padding:2px;
-  	white-space:nowrap;
-  }
-  .t13ReportRegion .t13RegionButtonsLeft{
-  	display:inline;
-    text-align:left;
-    border-bottom:solid 1px #bbb;
-}
-  .t13RegionButtonsTopLine{
+
+.t13RegionButtonsTopLine{
   	vertical-align:middle; 
   	text-align:right;
   	padding: 7px;
@@ -422,13 +394,7 @@ nav li a {
   	padding: 2px;
   	white-space:nowrap;
   }
-  .t13RegionTitleCenter{
-  	text-align:center;
-  	padding:1px;
-  	white-space:nowrap;
-	border:1px #ccc solid;
-	
-}
+
 .tabl{
 	margin-top: 50px;
 	width: 75%;
@@ -499,19 +465,8 @@ table.htmldbTabbedNavigationList {
   	padding: 0 6px 6px;
   	text-decoration: none;
   }
-  ul.htmldbTabbedNavigationList a.current:link,
-  ul.htmldbTabbedNavigationList a.current:visited, 
-  ul.htmldbTabbedNavigationList a:hover {
-  	background:transparent url(../images/tab_rounded_Blue_IAS.gif) no-repeat scroll center bottom;
-  	color:#000;
-  	font-weight:bold;
-  }
 
-  table.htmldbTabbedNavigationList_GS {
-  	margin:0 0 5px 0;
-  	border-bottom:2px solid #666;
-  }
-  table.htmldbTabbedNavigationList_GS td {
+table.htmldbTabbedNavigationList_GS td {
   	padding:0;
   	white-space:nowrap;
   }
@@ -534,12 +489,8 @@ table.htmldbTabbedNavigationList {
   	font-weight:bold;
   	font-size:12px;
   }
-  ul.htmldbTabbedNavigationList_GS{
-  	border-bottom:2px solid #666;
-  	margin-bottom:15px;
-  	padding:0 0 20px 6px;
-  }
-  ul.htmldbTabbedNavigationList_GS li{
+
+ul.htmldbTabbedNavigationList_GS li{
   	display:block;
   	float:left;
   	list-style-type:none;
@@ -557,15 +508,7 @@ table.htmldbTabbedNavigationList {
   	padding:0 6px 6px;
   	text-decoration:none;
   }
-  ul.htmldbTabbedNavigationList_GS a.current:link, 
-  ul.htmldbTabbedNavigationList_GS a.current:visited, 
-  ul.htmldbTabbedNavigationList_GS a:hover {
-  	background:transparent url(../images/tab_rounded_gray_IAS.gif) no-repeat scroll center bottom;
-  	color:#000;
-  	font-weight:bold;
-  }
 
-  
 .t13FormRegion {
     border: 1px solid #0066ff;
     background-color: #EEE9E9;
