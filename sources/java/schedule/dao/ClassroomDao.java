@@ -21,7 +21,7 @@ public class ClassroomDao extends Dao {
     }
 
     public boolean insert(Classroom classroom) {
-        if (!doesEntityExist(Classroom.class, classroom, classroom.getId())) {
+        if (!doesEntityExist(classroom, classroom.getId())) {
             Collection<ClassroomType> types = classroom.getTypes();
             typeDao.insert(types);
 

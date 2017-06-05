@@ -15,7 +15,7 @@ public class ClassroomTypeDao extends Dao {
      * @return True if object has been inserted, otherwise - false.
      */
     public boolean insert(ClassroomType classroomType) {
-        if (!doesEntityExist(ClassroomType.class, classroomType, classroomType.getId())) {
+        if (!doesEntityExist(classroomType, classroomType.getId())) {
             entityManager.persist(classroomType);
             return true;
         } else {
