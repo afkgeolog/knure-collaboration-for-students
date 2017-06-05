@@ -59,8 +59,7 @@ public class HibernateConfiguration implements ApplicationContextAware{
     @Primary
     public DataSource createDataSource(DataSourceProperties dataSourceProperties) {
         DataSourceBuilder builder = dataSourceProperties.initializeDataSourceBuilder();
-        DataSource dataSource = builder.build();
-        return dataSource;
+        return builder.build();
     }
 
     @Bean

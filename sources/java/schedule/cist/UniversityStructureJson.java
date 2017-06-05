@@ -16,8 +16,7 @@ final class UniversityStructureJson {
         JsonNode jsonNode = new ObjectMapper().reader().readTree(jsonString);
         JsonNode universityNode = jsonNode.get("university");
         ObjectReader universityReader = new ObjectMapper().readerFor(University.class);
-        University university = universityReader.readValue(universityNode);
 
-        return university;
+        return universityReader.readValue(universityNode);
     }
 }
