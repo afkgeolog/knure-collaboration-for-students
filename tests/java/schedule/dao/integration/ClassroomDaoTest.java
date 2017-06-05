@@ -2,7 +2,6 @@ package schedule.dao.integration;
 
 import infrastructure.config.HibernateConfiguration;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Commit;
@@ -37,10 +36,5 @@ public class ClassroomDaoTest {
     public void deleteAllClassrooms() {
         Query query = entityManager.createQuery("DELETE FROM Classroom");
         query.executeUpdate();
-    }
-
-    @Test
-    public void insert_newValidClassroom_Success() {
-
     }
 }
