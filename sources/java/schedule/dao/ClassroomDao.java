@@ -13,8 +13,12 @@ import java.util.Collection;
 @Component
 public class ClassroomDao extends Dao {
 
+    private final ClassroomTypeDao typeDao;
+
     @Autowired
-    private ClassroomTypeDao typeDao;
+    public ClassroomDao(ClassroomTypeDao typeDao) {
+        this.typeDao = typeDao;
+    }
 
     public boolean insert(Classroom classroom) {
         if (!doesEntityExist(Classroom.class, classroom, classroom.getId())) {

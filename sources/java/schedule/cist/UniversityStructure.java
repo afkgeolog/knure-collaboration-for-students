@@ -14,8 +14,12 @@ import java.io.IOException;
 @Service
 class UniversityStructure implements UniversityStructureApi{
 
+    private final RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    public UniversityStructure(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public University fetchProfessors() throws IOException {

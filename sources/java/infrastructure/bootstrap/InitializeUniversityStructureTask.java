@@ -6,8 +6,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import schedule.cist.UniversityStructureApi;
-import schedule.dao.ClassroomDao;
-import schedule.dao.ClassroomTypeDao;
 import schedule.models.Building;
 import schedule.models.Classroom;
 import schedule.models.University;
@@ -21,14 +19,12 @@ import java.util.logging.Logger;
 @Component
 final class InitializeUniversityStructureTask implements ApplicationListener<ApplicationReadyEvent> {
 
-    @Autowired
-    private UniversityStructureApi universityStructure;
+    private final UniversityStructureApi universityStructure;
 
     @Autowired
-    private ClassroomTypeDao classroomTypeDao;
-
-    @Autowired
-    private ClassroomDao classroomDao;
+    public InitializeUniversityStructureTask(UniversityStructureApi universityStructure) {
+        this.universityStructure = universityStructure;
+    }
 
     @Transactional
     @Override

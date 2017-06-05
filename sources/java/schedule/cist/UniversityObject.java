@@ -15,8 +15,12 @@ import java.util.Collection;
 @Service
 public class UniversityObject implements UniversityObjectApi {
 
+    private final RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    public UniversityObject(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public Collection<ClassroomType> fetchClassroomTypes() throws IOException {
