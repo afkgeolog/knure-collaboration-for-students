@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <link href="/css/calendar.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/css/calendar.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700,700i|Roboto:300i,400"
+          rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <title>University</title>
+</head>
+<body>
+<header class="head">
+    <a href="#" class="logo">
+        <img src="/images/logo.png" alt="logo" class="logotype"/>
+    </a>
+    <nav>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <button class="nav__btn" id="btn">Розклад</button>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flag">
+                    <img src="/images/flag.png" alt="logo" class="ukrflag"/>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flag">
+                    <img src="/images/login.png" alt="logo" class="login__round"/>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="content">
+    <div class="wrapper">
+        <div class="context">
+            <div class="search">
+                <form class="form-wrapper cf">
+                    <input type="text" placeholder=" Потiк, Група, Викладач..." required="true"/>
+                    <button type="submit">Пошук</button>
+                </form>
+            </div>
+            <div class="knob">
+                <ul class="button-group">
+                    <li>
+                        <button class="button" autofocus="autofocus">Група</button>
+                    </li>
+                    <li>
+                        <button class="button" id="btn">Викладач</button>
+                    </li>
+                    <li>
+                        <button class="button">Потiк</button>
+                    </li>
+                </ul>
+            </div>
+
+            <section>
+                <div class="tabl">
+                    <table class="htmldbTabbedNavigationList" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(95);" class="tabcurrent">КН</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(114);">КІУ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(56);">ITM</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(152);">ІРТЗІ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(192);">ЕЛБІ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(287);">АКТ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(237);">ІК</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(2);">ФЗН</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(672);">ФПО</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(6);">ФНІГ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(128);">ЦНСІМ</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(1070);">Аспірантура</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(64);">ЦДП</a>
+                            </td>
+                            <td valign="bottom">
+                                <a href="#" OnClick="IAS_Change_Groups(2001);">Інші</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table summary="" cellpadding="0" border="0" cellspacing="2" class="general">
+                        <tr>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">1-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПВПС-16-1',5721789)">ВПВПС-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПВПС-16-2',5927428)">ВПВПС-16-2</a><br/>
+
+
+                                            <B>ІТКН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-1',5721773)">ІТКН-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКНу-16-1',5721777)">ІТКНу-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-2',5721693)">ІТКН-16-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-3',5721737)">ІТКН-16-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-4',5927834)">ІТКН-16-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-5',5927836)">ІТКН-16-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-6',5927838)">ІТКН-16-6</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-7',5721739)">ІТКН-16-7</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-8',5721775)">ІТКН-16-8</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТКН-16-9',5721667)">ІТКН-16-9</a><br/>
+
+
+                                            <B>ПЗПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-1',5721727)">ПЗПІ-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-2',5721659)">ПЗПІ-16-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-3',5721681)">ПЗПІ-16-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-4',5721751)">ПЗПІ-16-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-5',5721765)">ПЗПІ-16-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-6',5721753)">ПЗПІ-16-6</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-7',5927820)">ПЗПІ-16-7</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗПІ-16-8',5927832)">ПЗПІ-16-8</a><br/>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">2-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-15-1',5259400)">ВПС-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-15-2',5451498)">ВПС-15-2</a><br/>
+
+
+                                            <B>КН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-1',5259442)">КН-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-2',5259418)">КН-15-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-3',5259344)">КН-15-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-4',5259288)">КН-15-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-5',5259346)">КН-15-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-15-6',5259316)">КН-15-6</a><br/>
+
+
+                                            <B>ПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-1',5259324)">ПІ-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-2',5259326)">ПІ-15-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-3',5259276)">ПІ-15-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-4',5259430)">ПІ-15-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-5',5259356)">ПІ-15-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-15-6',5259300)">ПІ-15-6</a><br/>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">3-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-14-1',4801938)">ВПС-14-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-14-2',4801962)">ВПС-14-2</a><br/>
+
+
+                                            <B>КН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-1',4801980)">КН-14-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-2',4802018)">КН-14-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-3',4801950)">КН-14-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-4',5008859)">КН-14-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-5',4801998)">КН-14-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-6',4801996)">КН-14-6</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-11',5493823)">КН-14-11</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-12',5493831)">КН-14-12</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-13',5493825)">КН-14-13</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-14-14',5493809)">КН-14-14</a><br/>
+
+
+                                            <B>ПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-1',4801986)">ПІ-14-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-2',4801972)">ПІ-14-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-3',4801920)">ПІ-14-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-4',4801922)">ПІ-14-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-5',4801924)">ПІ-14-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-14-6',5008857)">ПІ-14-6</a><br/>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">4-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-13-1',4307182)">ВПС-13-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-13-2',4307126)">ВПС-13-2</a><br/>
+
+
+                                            <B>КН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-1',4307188)">КН-13-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-2',4536394)">КН-13-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-3',4307190)">КН-13-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-4',4307134)">КН-13-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-5',4442653)">КН-13-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-13-6',4442656)">КН-13-6</a><br/>
+
+
+                                            <B>ПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-1',4307198)">ПІ-13-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-2',4307140)">ПІ-13-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-3',4307200)">ПІ-13-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-4',4442658)">ПІ-13-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-5',4537855)">ПІ-13-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-13-6',4537859)">ПІ-13-6</a><br/>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">5-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-12-1',3802915)">ВПС-12-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-12-2',4026967)">ВПС-12-2</a><br/>
+
+
+                                            <B>ІПЗ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗс-16-1',5742444)">ІПЗс-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗм-16-1',5742406)">ІПЗм-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗс-16-2',5929138)">ІПЗс-16-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗм-16-2',5929134)">ІПЗм-16-2</a><br/>
+
+
+                                            <B>ІТП</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТПм-16-1',5742314)">ІТПм-16-1</a><br/>
+
+
+                                            <B>ІУСТ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІУСТм-16-1',5742312)">ІУСТм-16-1</a><br/>
+
+
+                                            <B>КН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-1',3802921)">КН-12-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-2',3803045)">КН-12-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-3',4026971)">КН-12-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-4',4027779)">КН-12-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-5',4026973)">КН-12-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-12-6',3802959)">КН-12-6</a><br/>
+
+
+                                            <B>КТСВПВ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КТСВПВс-16-1',5742438)">КТСВПВс-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КТСВПВм-16-1',5742374)">КТСВПВм-16-1</a><br/>
+
+
+                                            <B>ПЗС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗСм-16-1',5742300)">ПЗСм-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗСм-16-2',5929140)">ПЗСм-16-2</a><br/>
+
+
+                                            <B>ПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-1',3802971)">ПІ-12-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-2',3802957)">ПІ-12-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-3',3802973)">ПІ-12-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-4',3802917)">ПІ-12-4</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-5',4026975)">ПІ-12-5</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-12-6',4026977)">ПІ-12-6</a><br/>
+
+
+                                            <B>СПР</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СПРм-16-1',5742448)">СПРм-16-1</a><br/>
+
+
+                                            <B>СШІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СШІс-16-1',5742332)">СШІс-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СШІм-16-1',5742368)">СШІм-16-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СШІм-16-2',5929128)">СШІм-16-2</a><br/>
+
+
+                                            <B>ТЕМВ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ТЕМВм-16-1',5742344)">ТЕМВм-16-1</a><br/>
+
+
+                                            <B>УП</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('УПм-16-1',5742414)">УПм-16-1</a><br/>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+
+                            <td style="padding:5px;vertical-align:top;">
+                                <table class="t13FormRegion" style="vertical-align:top;" cellpadding="0" cellspacing="0"
+                                       border="0" summary="" id="R1773604915627720">
+                                    <thead class="t13RegionHeader">
+                                    <tr>
+                                        <th class="t13RegionTitle">6-й Курс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="t13RegionBody">
+
+
+                                            <B>ВПС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ВПС-11-1',3417067)">ВПС-11-1</a><br/>
+
+
+                                            <B>ІПЗ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗм-15-1',5304062)">ІПЗм-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІПЗс-15-1',5304060)">ІПЗс-15-1</a><br/>
+
+
+                                            <B>ІТП</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТПМ-15-1+СПРМ-15-1',5535364)">ІТПМ-15-1+СПРМ-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТПм-15-1',5304068)">ІТПм-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІТПс-15-1',5304066)">ІТПс-15-1</a><br/>
+
+
+                                            <B>ІУСТ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІУСТМ-15-1+УПМ-15-1',5535356)">ІУСТМ-15-1+УПМ-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ІУСТм-15-1',5304072)">ІУСТм-15-1</a><br/>
+
+
+                                            <B>КН</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-11-1',3417055)">КН-11-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-11-2',3417057)">КН-11-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-11-3',3417085)">КН-11-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-11-9',5060973)">КН-11-9</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КН-11-10',5060979)">КН-11-10</a><br/>
+
+
+                                            <B>КТСВПВ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КТСВПВм-15-1',5304054)">КТСВПВм-15-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('КТСВПВс-15-1',5304049)">КТСВПВс-15-1</a><br/>
+
+
+                                            <B>ПЗС</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПЗСм-15-1',5304064)">ПЗСм-15-1</a><br/>
+
+
+                                            <B>ПІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-11-1',3417095)">ПІ-11-1</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-11-2',3417083)">ПІ-11-2</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-11-3',3417111)">ПІ-11-3</a><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ПІ-11-4',3803013)">ПІ-11-4</a><br/>
+
+
+                                            <B>СПР</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СПРм-15-1',5304070)">СПРм-15-1</a><br/>
+
+
+                                            <B>СШІ</B><br/>
+
+
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СШІс-15-1',5304074)">СШІс-15-1</a><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('СШІм-15-1',5304076)">СШІм-15-1</a><br/>
+                                            <B>ТДВ</B><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ТДВс-15-1',5304052)">ТДВс-15-1</a><br/>
+                                            <B>ТЕМВ</B><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('ТЕМВм-15-1',5453711)">ТЕМВм-15-1</a><br/>
+                                            <B>УП</B><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('УПм-15-1',5304078)">УПм-15-1</a><br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<a style="white-space:nowrap;" href="#"
+                                                                       OnClick="IAS_ADD_Group_in_List('УПМ-15-1+ІТПМ-15-1+СПРМ-15-1',5535396)">УПМ-15-1+ІТПМ-15-1+СПРМ-15-1</a><br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="t13RegionButtonsTopLine"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="timetable">
+
+            <table class="about__tabl">
+                <tr>
+                    <th class="abot__capt">Розклад</th>
+                    <th class="abot__capt">
+                        <p>Понедiлок </p>
+                        <p>27.05.2017</p>
+                    </th>
+                    <th class="abot__capt">
+                        <p>Вiвторок </p>
+                        <p>28.05.2017</p>
+                    </th>
+                    <th class="abot__capt">
+                        <p>Середа </p>
+                        <p>29.05.2017</p>
+                    </th>
+                    <th class="abot__capt">
+                        <p>Четверг </p>
+                        <p>30.05.2017</p>
+                    </th>
+                    <th class="abot__capt">
+                        <p>П'ятниця </p>
+                        <p>31.05.2017</p>
+                    </th>
+                    <th class="abot__capt">
+                        <p>Субота </p>
+                        <p>01.06.2017</p>
+                    </th>
+
+                </tr>
+                <tr>
+                    <td class="about__lining">
+                        <p>09:30</p>
+                        <p>11:05</p>
+                    </td>
+                    <td class="about__lining">ОДМ Лк 408и</td>
+                    <td class="about__lining">30.5</td>
+                    <td class="about__lining">23.5</td>
+                    <td class="about__lining">40.3</td>
+                    <td class="about__lining">40.3</td>
+                    <td class="about__lining">40.3</td>
+                </tr>
+                <tr>
+                    <td class="about__lining">
+                        <p>11:15</p>
+                        <p>12:50</p>
+                    </td>
+                    <td class="about__lining">ОМз Лк 140</td>
+                    <td class="about__lining">ВМ Лк 308и</td>
+                    <td class="about__lining">ВМ Конс 36з</td>
+                    <td class="about__lining">ВМ Лк 208и</td>
+                    <td class="about__lining">ІКГ Лк 406и</td>
+                    <td class="about__lining">КУПДМ Лк 601и</td>
+                </tr>
+                <tr>
+                    <td class="about__lining">
+                        <p>13:10</p>
+                        <p>14:45</p>
+                    </td>
+                    <td class="about__lining">КУПДМ Лк 601и</td>
+                    <td class="about__lining">30.2</td>
+                    <td class="about__lining">33.3</td>
+                    <td class="about__lining">36.7</td>
+                    <td class="about__lining">40.3</td>
+                    <td class="about__lining">40.3</td>
+                </tr>
+                <tr>
+                    <td class="about__lining">
+                        <p>14:55</p>
+                        <p>16:30</p>
+                    </td>
+                    <td class="about__lining">ІКГ Лк 406и</td>
+                    <td class="about__lining">15.6</td>
+                    <td class="about__lining">22.3</td>
+                    <td class="about__lining">29.3</td>
+                    <td class="about__lining">40.3</td>
+                    <td class="about__lining">40.3</td>
+                </tr>
+                <tr>
+                    <td class="about__lining">
+                        <p>16:40</p>
+                        <p>18:15</p>
+                    </td>
+                    <td class="about__lining">Фіз Лк 408и</td>
+                    <td class="about__lining">15.6</td>
+                    <td class="about__lining">22.3</td>
+                    <td class="about__lining">29.3</td>
+                    <td class="about__lining">40.3</td>
+                    <td class="about__lining">40.3</td>
+                </tr>
+            </table>
+
+        </div>
+        <!--</section>-->
+        <div class="ondisplay">
+            <!-- Squared THREE -->
+            <div class="calendar">
+                <label for="date">Дата початку: </label>
+                <input type="text" id="date" name="date" readonly="readonly" size="27" onclick="showcalendar(this)"/>
+            </div>
+            <div class="squaredThree">
+                <input type="checkbox" value="None" id="squaredThree" name="check"/>
+                <label for="squaredThree"></label>
+                <p> Пропустити пустi днi</p>
+            </div>
+
+        </div>
+        <div class="additional">
+            <div class="about__additionl">
+                <div class="subject">
+                    <ul>
+                        <li>
+                            <p class="banner">Предмети:</p>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="subject" name="check"/>
+                                <label for="subject"></label>
+                                <p> Вища математика: Середа О.Г.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="person" name="check"/>
+                                <label for="person"></label>
+                                <p> Інженерна та комп"ютерна графіка: Челомбітько В.Ф.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="thing" name="check"/>
+                                <label for="thing"></label>
+                                <p> Основи графічного дизайну: Бокарєва Ю. С.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="conteiner">
+                    <ul>
+                        <li>
+                            <p class="caption">Типи предметiв:</p>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="squa" name="check"/>
+                                <label for="squa"></label>
+                                <p> ЛБ</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="squar" name="check"/>
+                                <label for="squar"></label>
+                                <p> ЛК</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="squar">
+                                <input type="checkbox" value="None" id="square" name="check"/>
+                                <label for="square"></label>
+                                <p> ПЗ</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="qwer">
+            <p class="footer__discription">
+                &copy;2016 MoGo free PSD template by
+                <a href="#" class="author__link">Laaqiq</a>
+            </p></div>
+    </div>
+</div>
+
+</body>
+</html>
